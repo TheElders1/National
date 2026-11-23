@@ -3,10 +3,10 @@ import { nav, databases, SITE_URL, ANTHEM_URL, CONTACT } from "@/lib/config";
 import Crest from "@/components/Crest";
 
 export default function Footer() {
-  const h = "font-serif text-gold-soft text-lg mb-3";
+  const h = "font-serif text-amber-soft text-lg mb-3";
   const a = "block py-1 text-white/75 hover:text-white";
   return (
-    <footer className="bg-navy text-white">
+    <footer className="bg-ink text-white">
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-4">
         <div><Crest size={72} ring />
           <p className="font-serif text-xl">NationBuilders Polytechnic Library</p><p className="mt-2 text-white/70">Asaba, Nigeria. Digital Library Portal.</p></div>

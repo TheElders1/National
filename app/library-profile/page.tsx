@@ -6,14 +6,14 @@ export const metadata: Metadata = { title: "Library Profile", description: "Visi
 export default function Profile() {
   return (<>
     <PageHero title="Library profile" intro="Our vision, our mission and how to reach us." />
-    <Section title="Library vision"><blockquote className="max-w-3xl border-l-2 border-gold pl-5 font-serif text-xl leading-relaxed text-navy">{VISION}</blockquote></Section>
-    <Section title="Library mission" tone="paper">
+    <Section title="Library vision"><blockquote className="max-w-3xl border-l-2 border-amber pl-5 font-serif text-xl leading-relaxed text-ink">{VISION}</blockquote></Section>
+    <Section title="Library mission" tone="sand">
       <p className="mb-8 max-w-3xl font-serif text-lg">{MISSION_INTRO}</p>
       <ol className="grid gap-5 md:grid-cols-3">
         {missions.map((m, i) => (
           <li key={m.title} className="card p-7">
-            <span className="font-serif text-4xl text-gold">{i + 1}</span>
-            <h3 className="mt-2 font-serif text-xl text-navy">{m.title}</h3>
+            <span className="font-serif text-4xl text-amber">{i + 1}</span>
+            <h3 className="mt-2 font-serif text-xl text-ink">{m.title}</h3>
             <p className="mt-2 leading-relaxed text-slate-700">{m.text}</p>
           </li>))}
       </ol>
@@ -23,7 +23,7 @@ export default function Profile() {
         <p>{CONTACT.address}</p><p>{CONTACT.phone}</p>
         <p><a className="underline" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
       </address>
-      <div className="mt-6 [&_a]:bg-navy [&_a]:text-white"><ButtonLink href={SITE_URL} external>Polytechnic website</ButtonLink></div>
+      <div className="mt-6 [&_a]:bg-ink [&_a]:text-white"><ButtonLink href={SITE_URL} external>Polytechnic website</ButtonLink></div>
     </Section>
   </>);
 }

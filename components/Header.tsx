@@ -14,21 +14,21 @@ export default function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <Crest size={48} />
-          <span className="leading-tight"><span className="block font-serif text-lg text-navy">NationBuilders Polytechnic Library</span><span className="block text-xs text-slate-500">Asaba, Delta State</span></span>
+          <span className="leading-tight"><span className="block font-serif text-lg text-ink">NationBuilders Polytechnic Library</span><span className="block text-xs text-slate-500">Asaba, Delta State</span></span>
         </Link>
         <nav className="hidden md:flex gap-1" aria-label="Main">
           {nav.map(n => (
             <Link key={n.href} href={n.href} aria-current={path === n.href ? "page" : undefined}
-              className={"rounded px-3 py-2 text-sm font-medium " + (path === n.href ? "bg-navy text-white" : "text-slate-700 hover:text-navy hover:bg-paper")}>{n.label}</Link>
+              className={"rounded px-3 py-2 text-sm font-medium " + (path === n.href ? "bg-ink text-white" : "text-slate-700 hover:text-ink hover:bg-sand")}>{n.label}</Link>
           ))}
         </nav>
-        <button className="md:hidden p-2 text-navy" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}>
+        <button className="md:hidden p-2 text-ink" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}>
           {open ? <X /> : <Menu />}
         </button>
       </div>
       {open && (
         <nav className="md:hidden border-t border-slate-200 bg-white px-5 py-3" aria-label="Mobile">
-          {nav.map(n => <Link key={n.href} href={n.href} onClick={() => setOpen(false)} className="block py-3 text-navy border-b border-slate-100 last:border-0">{n.label}</Link>)}
+          {nav.map(n => <Link key={n.href} href={n.href} onClick={() => setOpen(false)} className="block py-3 text-ink border-b border-slate-100 last:border-0">{n.label}</Link>)}
         </nav>
       )}
     </header>

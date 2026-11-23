@@ -2,8 +2,8 @@ import type { Config } from "tailwindcss";
 const config: Config = {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./lib/**/*.{ts,tsx}"],
   theme: { extend: {
-    colors: { navy: { DEFAULT: "#0B2545", 700: "#13315C", 500: "#1D4478" }, gold: { DEFAULT: "#B8955A", soft: "#E9DCC2" }, paper: "#F5F6F8" },
-    fontFamily: { serif: ["Iowan Old Style", "Palatino Linotype", "Palatino", "Georgia", "serif"], sans: ["Inter", "Segoe UI", "system-ui", "sans-serif"] },
+    colors: { ink: { DEFAULT: "#0F3B2E", 700: "#17503F", 500: "#1F6A54" }, amber: { DEFAULT: "#E8A317", soft: "#FBE7B5" }, sand: "#FBF6EA" },
+    fontFamily: { serif: ["Avenir Next", "Segoe UI", "Trebuchet MS", "system-ui", "sans-serif"], sans: ["Inter", "Segoe UI", "system-ui", "sans-serif"] },
   } },
   plugins: [],
 };
