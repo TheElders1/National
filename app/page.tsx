@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, BookOpen, Database, Landmark, Archive } from "lucide-react";
+import SchoolPhoto from "@/components/SchoolPhoto";
 import { ButtonLink, DbCard, Icon, Section } from "@/components/ui";
 import { databases, serviceGroups, VISION, SITE_URL, ANTHEM_URL } from "@/lib/config";
 
@@ -30,8 +31,7 @@ function BookArt() {
 export default function Home() {
   return (<>
     <section className="spines relative overflow-hidden bg-ink text-white">
-      <div aria-hidden className="absolute inset-0 bg-cover bg-center opacity-25" style={{ backgroundImage: "url(/building.jpg)" }} />
-      <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 py-20 md:py-28 lg:grid-cols-[1.4fr_1fr]">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 py-20 md:py-28 lg:grid-cols-[1.2fr_1fr]">
        <div className="hero-rise">
         <p className="mb-5 inline-block border-b border-amber pb-1 text-sm text-amber-soft">Excellence · Faith · Productivity</p>
         <h1 className="font-serif text-5xl leading-[1.05] md:text-7xl">Welcome to NationBuilders Polytechnic Library</h1>
@@ -41,7 +41,7 @@ export default function Home() {
           <ButtonLink href="/databases" variant="ghost">Access Academic Databases</ButtonLink>
         </div>
         </div>
-       <BookArt />
+       <SchoolPhoto className="mx-auto w-full max-w-md lg:max-w-none" fallback={<BookArt />} />
       </div>
     </section>
 
