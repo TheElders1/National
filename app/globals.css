@@ -1,7 +1,7 @@
 @tailwind base; @tailwind components; @tailwind utilities;
 html { scroll-behavior: smooth; }
 body { @apply bg-sand text-slate-800 font-sans antialiased; }
-:focus-visible { outline: 2px solid #E8A317; outline-offset: 2px; }
+:focus-visible { outline: 2px solid #F2B632; outline-offset: 2px; }
 @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 .hero-rise > * { animation: rise .7s ease both; }
 .hero-rise > *:nth-child(2) { animation-delay: .12s; } .hero-rise > *:nth-child(3) { animation-delay: .24s; } .hero-rise > *:nth-child(4) { animation-delay: .36s; }
@@ -9,6 +9,6 @@ body { @apply bg-sand text-slate-800 font-sans antialiased; }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
 
 h1,h2,h3 { letter-spacing: -0.02em; font-weight: 800; }
-.rule::after { content:""; display:block; width:72px; height:6px; background:#E8A317; margin-top:14px; }
-.card { background:#fff; border:2px solid #0F3B2E; border-radius:2px; box-shadow:5px 5px 0 #FBE7B5; transition:box-shadow .15s, transform .15s; }
-.card:hover { box-shadow:7px 7px 0 #E8A317; transform:translate(-2px,-2px); }
+.rule::after { content:""; display:block; width:72px; height:6px; background:#F2B632; margin-top:14px; }
+.card { background:#fff; border:2px solid #12356B; border-radius:2px; box-shadow:5px 5px 0 #FBEBC0; transition:box-shadow .15s, transform .15s; }
+.card:hover { box-shadow:7px 7px 0 #F2B632; transform:translate(-2px,-2px); }

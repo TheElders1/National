@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { nav } from "@/lib/config";
+import { nav, CONTACT, SITE_URL } from "@/lib/config";
 import Crest from "@/components/Crest";
 
 export default function Header() {
@@ -11,6 +11,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
+      <div className="hidden bg-ink text-xs text-white/85 md:block"><div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-2"><span>{CONTACT.address}</span><span className="flex gap-5"><span>{CONTACT.phone}</span><a href={`mailto:${CONTACT.email}`} className="hover:text-amber">{CONTACT.email}</a><a href={SITE_URL} target="_blank" rel="noopener noreferrer" className="font-bold text-amber">Polytechnic website</a></span></div></div>
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <Crest size={48} />
