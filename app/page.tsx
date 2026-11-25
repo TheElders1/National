@@ -16,7 +16,7 @@ const facts = [
   { k: `${serviceGroups.length}`, v: "Groups of library services" },
   { k: "Open", v: "To the whole school community" },
 ];
-const programmes = ["Business Administration", "Computer Engineering", "Computer Science", "Electrical Engineering", "Hospitality Management"];
+const programmes = ["Accounting", "Business Administration", "Computer Engineering", "Computer Science", "Electrical Engineering", "Hospitality Management", "Science Laboratory Technology"];
 const preview = ["Lending and Circulation", "Reference and Information Services", "Current Awareness and Information Dissemination", "Indexing and Abstracting", "Digital Searching", "Printing Services"];
 const iconFor = (n: string) => serviceGroups.flatMap(g => g.items).find(i => n.startsWith(i.name.split(" ")[0]))?.icon ?? "BookOpen";
 
